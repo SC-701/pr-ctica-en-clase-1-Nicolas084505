@@ -16,8 +16,9 @@ namespace API.Controllers
         {
             _documentoFlujo = documentoFlujo;
         }
+
         [HttpPost]
-        public async Task<IActionResult> Enviar([FromBody]Correo correo)
+        public async Task<IActionResult> enviar([FromBody]Correo correo)
         {
             var resultado = _documentoFlujo.Enviar(correo);
             return Ok();
